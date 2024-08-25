@@ -4,7 +4,7 @@ if (typeof trackList === 'undefined') {
 }
 
 const tickerText = document.getElementById('ticker-text');
-const tickerMessage = 'CREDITS:';
+const tickerMessage = 'CREDITS: WindyBro & SimpleJosh';
 tickerText.innerText = tickerMessage;
 
 const albumCover = document.getElementById('album-cover');

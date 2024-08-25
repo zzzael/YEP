@@ -3,11 +3,11 @@
 const albumList = [
     {
         name: "VULTURES II",
-        img: "images/image1.jpg",
+        img: "images/image1.png",
         link: "VULTURES2.html"
     },
     {
-        name: "MODEL 2",
+        name: "MODEL",
         img: "images/jesusisking.png",
         link: "upload.html"
     }
