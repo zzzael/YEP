@@ -7,9 +7,13 @@ const albumList = [
         link: "VULTURES2.html"
     },
     {
-        name: "MODEL",
-        img: "images/jesusisking.png",
-        link: "upload.html"
+        name: "WORSHIP - SINGLE",
+        img: "images/unnamed.png",
+        link: "WORSHIP.html"
+    },
+    {
+        name: "PAY PER VIEW (MR MIYAGI MASHUP)",
+        img: "images/cover.png",
+        link: "PPV.html"
     }
-    // Add more albums as needed
 ];
