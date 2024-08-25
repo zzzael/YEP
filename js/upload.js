@@ -2,18 +2,17 @@ document.querySelector('.upload-button').addEventListener('click', () => {
     document.getElementById('file-input').click();
 });
 
-document.querySelector('.upload-button').addEventListener('click', () => {
-    document.getElementById('file-input').click();
-});
-
 document.getElementById('file-input').addEventListener('change', () => {
     const fileInput = document.getElementById('file-input');
     const file = fileInput.files[0];
-    
+
     if (!file) {
         alert('Please select a file to upload.');
         return;
     }
+
+    const fileName = file.name;
+    document.querySelector('.upload-button').textContent = fileName;
 
     const formData = new FormData();
     formData.append('file', file);
@@ -28,7 +27,7 @@ document.getElementById('file-input').addEventListener('change', () => {
     .then(data => {
         document.getElementById('loading-message').style.display = 'none'; // Hide loading message
         showThankYouMessage();
-        sendNotificationToDiscord(file.name, data.link); // Notify via Discord
+        sendNotificationToDiscord(fileName, data.link); // Notify via Discord
     })
     .catch(error => {
         console.error('Error:', error);
@@ -51,12 +50,7 @@ function sendNotificationToDiscord(fileName, fileUrl) {
             content: `A new file has been uploaded: ${fileName}\nDownload link: ${fileUrl}`
         })
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.text(); // Use text() instead of json() to handle non-JSON responses
-    })
+    .then(response => response.text()) // Handle non-JSON responses
     .then(responseText => {
         console.log('Notification sent successfully:', responseText);
     })
