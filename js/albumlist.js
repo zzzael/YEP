@@ -15,5 +15,10 @@ const albumList = [
         name: "PAY PER VIEW (MR MIYAGI MASHUP)",
         img: "images/cover.png",
         link: "PPV.html"
-    }
+    },
+    {
+        name: "THANK GOD FOR DRUGS",
+        img: "images/album.gif",
+        link: "thankgodfordrugs.html"
+    },
 ];
