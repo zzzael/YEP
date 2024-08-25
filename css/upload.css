@@ -12,39 +12,12 @@ body {
     position: relative;
 }
 
-.ticker-container {
-    position: absolute;
-    top: 10px;
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 14px;
-    font-family: Helvetica, sans-serif;
-    font-weight: bold;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-.ticker-text {
-    display: inline-block;
-    padding-right: 100%;
-    animation: ticker 31s linear infinite;
-}
-
-@keyframes ticker {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-.player-container {
-    text-align: center;
-    max-width: 500px;
-    display: block;
-    margin-top: 50px;
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the left */
+    text-align: left; /* Aligns text to the left */
+    padding: 20px;
 }
 
 .album-cover {
@@ -57,14 +30,10 @@ body {
     transition: opacity 0.5s;
 }
 
-.track-info {
-    margin-bottom: 20px;
-}
-
-.info-text {
+.upload-message {
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .upload-button {
@@ -87,13 +56,6 @@ body {
 .loading {
     color: #fff;
     font-size: 18px;
-    font-weight: 700;
-    display: none;
-}
-
-.thank-you {
-    color: #fff;
-    font-size: 36px;
     font-weight: 700;
     display: none;
 }
